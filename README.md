@@ -1,10 +1,11 @@
 # NSMNIA Template
 
-My personal Turborepo template for building scalable Next.js apps.
+My personal Turborepo template for building scalable Next.js apps. It's a monorepo with shared tooling, a design system, and built-in code consistency.
 
-## Overview
+## Apps created with this template
 
-A Next.js monorepo boilerplate with shared tooling, a design system, and built-in code consistency.
+- [Tune Tracker](https://tune-tracker.com/): A web app that helps you stay up to date with new music releases from your favorite artists on Spotify.
+
 
 ## Included Tools & Frameworks
 
