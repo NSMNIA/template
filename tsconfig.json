@@ -1,0 +1,3 @@
+{
+  "extends": "@nsmnia-template/typescript-config/base.json"
+}

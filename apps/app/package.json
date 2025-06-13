@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nsmnia-template/design-system": "workspace:*",
+    "@nsmnia-template/seo": "workspace:*"
+  },
+  "devDependencies": {
+    "@nsmnia-template/next-config": "workspace:*",
+    "@nsmnia-template/typescript-config": "workspace:*",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10"
+  }
+}

@@ -1,0 +1,4 @@
+@import "@nsmnia-template/design-system/styles/globals.css";
+
+@source "./**/*.{ts,tsx}";
+@source "../../../../packages/design-system/**/*.{ts,tsx}";

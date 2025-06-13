@@ -1,0 +1,16 @@
+{
+  "extends": "@nsmnia-template/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.css"],
+  "exclude": ["node_modules"]
+}

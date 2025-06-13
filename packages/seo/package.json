@@ -1,0 +1,23 @@
+{
+  "name": "@nsmnia-template/seo",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./metadata.ts",
+  "exports": {
+    "./metadata": "./metadata.ts",
+    "./json-ld": "./json-ld.tsx"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "lodash.merge": "^4.6.2",
+    "schema-dts": "^1.1.5"
+  },
+  "devDependencies": {
+    "@nsmnia-template/typescript-config": "workspace:*",
+    "@nsmnia-template/next-config": "workspace:*",
+    "@types/lodash.merge": "^4.6.9"
+  }
+}

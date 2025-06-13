@@ -1,0 +1,33 @@
+{
+  "name": "nsmnia-template",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "analyze": "turbo analyze",
+    "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@nsmnia-template/typescript-config": "workspace:*",
+    "@t3-oss/env-core": "^0.13.8",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "@types/node": "24.0.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3",
+    "ultracite": "^4.2.10"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "next": "^15.3.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  }
+}

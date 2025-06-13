@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+  - packages/*
+
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - core-js-pure
+  - esbuild
+  - sharp
+  - unrs-resolver
