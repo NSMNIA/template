@@ -86,6 +86,9 @@ importers:
       '@nsmnia-template/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@storybook/addon-a11y':
+        specifier: ^9.0.9
+        version: 9.0.9(storybook@9.0.9(@testing-library/dom@10.4.0)(prettier@3.5.3))
       '@storybook/addon-essentials':
         specifier: ^9.0.0-alpha.12
         version: 9.0.0-alpha.12(storybook@9.0.9(@testing-library/dom@10.4.0)(prettier@3.5.3))
@@ -1509,6 +1512,11 @@ packages:
   '@sinonjs/fake-timers@13.0.5':
     resolution: {integrity: sha512-36/hTbH2uaWuGVERyC6da9YwGWnzUZXuPro/F2LfsdOsLnCojz/iSH8MxUt/FD2S5XBSVPhmArFUXcpCQ2Hkiw==}
 
+  '@storybook/addon-a11y@9.0.9':
+    resolution: {integrity: sha512-0oNSkjdmvJadSORAlCFia4YfxWjrYNNMmuK64Jrl/kahWj3tFX1JMAI1uNWuHc+SRwGzC5rEhw4oq+7AmVUVag==}
+    peerDependencies:
+      storybook: ^9.0.9
+
   '@storybook/addon-backgrounds@9.0.0-alpha.12':
     resolution: {integrity: sha512-oiQL8GIs2jNhN1cfbWa6iJIdey/WC+TFlmIeoWzYsJ79EQCxpL5JgmzCMGIkZ+p7L4MUR/5S5b5fh6ApyWcUKw==}
     peerDependencies:
@@ -2124,6 +2132,10 @@ packages:
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
+
+  axe-core@4.10.3:
+    resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
+    engines: {node: '>=4'}
 
   babel-jest@30.0.0:
     resolution: {integrity: sha512-JQ0DhdFjODbSawDf0026uZuwaqfKkQzk+9mwWkq2XkKFIaMhFVOxlVmbFCOnnC76jATdxrff3IiUAvOAJec6tw==}
@@ -6112,6 +6124,12 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
+  '@storybook/addon-a11y@9.0.9(storybook@9.0.9(@testing-library/dom@10.4.0)(prettier@3.5.3))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      axe-core: 4.10.3
+      storybook: 9.0.9(@testing-library/dom@10.4.0)(prettier@3.5.3)
+
   '@storybook/addon-backgrounds@9.0.0-alpha.12(storybook@9.0.9(@testing-library/dom@10.4.0)(prettier@3.5.3))':
     dependencies:
       '@storybook/global': 5.0.0
@@ -6784,6 +6802,8 @@ snapshots:
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.1.0
+
+  axe-core@4.10.3: {}
 
   babel-jest@30.0.0(@babel/core@7.27.4):
     dependencies:
