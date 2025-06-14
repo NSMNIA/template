@@ -1,4 +1,4 @@
-import { createMetadata } from '@nsmnia-template/seo';
+import { createMetadata } from '@nsmnia-template/seo/metadata';
 import type { Metadata } from 'next';
 import './global.css';
 import type { ReactNode } from 'react';
