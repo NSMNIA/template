@@ -10,20 +10,18 @@
   },
   "dependencies": {
     "@nsmnia-template/design-system": "workspace:*",
-    "lucide-react": "^0.515.0"
+    "lucide-react": "^0.559.0"
   },
   "devDependencies": {
     "@nsmnia-template/next-config": "workspace:*",
     "@nsmnia-template/typescript-config": "workspace:*",
-    "@storybook/addon-a11y": "^9.0.9",
+    "@storybook/addon-a11y": "^10.1.6",
     "@storybook/addon-essentials": "^9.0.0-alpha.12",
     "@storybook/addon-interactions": "^9.0.0-alpha.10",
-    "@storybook/addon-onboarding": "^9.0.9",
-    "@storybook/addon-themes": "^9.0.9",
-    "@storybook/nextjs": "^9.0.9",
-    "@storybook/react": "^9.0.9",
-    "postcss": "^8.5.5",
-    "storybook": "^9.0.9",
-    "tailwindcss": "^4.1.10"
+    "@storybook/addon-onboarding": "^10.1.6",
+    "@storybook/addon-themes": "^10.1.6",
+    "@storybook/nextjs": "^10.1.6",
+    "@storybook/react": "^10.1.6",
+    "storybook": "^10.1.6"
   }
 }

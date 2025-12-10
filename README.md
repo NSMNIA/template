@@ -6,7 +6,6 @@ My personal Turborepo template for building scalable Next.js apps. It's a monore
 
 - [Tune Tracker](https://tune-tracker.com/): A web app that helps you stay up to date with new music releases from your favorite artists on Spotify.
 
-
 ## Included Tools & Frameworks
 
 - [Next.js](https://nextjs.org/) – React framework for web apps
@@ -35,8 +34,8 @@ My personal Turborepo template for building scalable Next.js apps. It's a monore
 
 ```bash
 ├── apps
-│   ├── app          # Main Next.js application
-│   └── storybook    # Storybook instance for UI development
+│   ├── app                # Main Next.js application
+│   └── storybook          # Storybook instance for UI development
 │
 ├── packages
 │   ├── design-system      # Reusable UI components and theme
@@ -60,10 +59,10 @@ Run the apps
 pnpm dev
 ```
 
-
 ## Scripts
 
 Commonly used scripts across the monorepo:
+
 ```bash
 pnpm dev           # Start all dev servers
 pnpm lint          # Run Biome lint checks

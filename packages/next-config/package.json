@@ -4,10 +4,14 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@nsmnia-template/typescript-config": "workspace:*"
+    "@nsmnia-template/typescript-config": "workspace:*",
+    "next": "^16.0.8"
+  },
+  "peerDependencies": {
+    "next": ">=16.0.8"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^15.3.3",
-    "zod": "^3.25.64"
+    "@next/bundle-analyzer": "^16.0.8",
+    "zod": "^4.1.13"
   }
 }

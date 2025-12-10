@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "biomejs.biome",
+    "naumovs.color-highlight",
+    "vivaxy.vscode-conventional-commits",
+    "usernamehw.errorlens",
+    "dsznajder.es7-react-js-snippets",
+    "cardinal90.multi-cursor-case-preserve",
+    "codeandstuff.package-json-upgrade",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss",
+    "vercel.turbo-vsc"
+  ]
+}
