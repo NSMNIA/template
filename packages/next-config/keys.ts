@@ -10,7 +10,7 @@ export const keys = () =>
       NODE_ENV: z.enum(['development', 'production']).optional(),
     },
     client: {
-      NEXT_PUBLIC_APP_URL: z.string().url(),
+      NEXT_PUBLIC_APP_URL: z.url(),
     },
     runtimeEnv: {
       ANALYZE: process.env.ANALYZE,

@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -117,9 +116,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground  antialiased;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     font-variant-numeric: slashed-zero;
+    font-variation-settings: 'opsz' auto;
+    font-family: var(--font-sans);
+    font-weight: 400;
   }
 }

@@ -1,12 +1,12 @@
-import { createMetadata } from '@nsmnia-template/seo/metadata';
-import type { Metadata } from 'next';
+import { createLayoutMetadata, createMetadata } from '@nsmnia-template/seo/metadata';
 import './global.css';
 import type { ReactNode } from 'react';
+import { cn } from '@nsmnia-template/design-system/lib/utils';
+import { FontSans } from '@nsmnia-template/design-system/lib/fonts';
 
-export const metadata: Metadata = createMetadata({
-  title: 'NSMNIA Template',
-  description: 'NSMNIA Template Application',
-});
+export const metadata = createLayoutMetadata({
+  description: 'Homepage of NSMNIA Template',
+})
 
 export default function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={cn(FontSans.variable)}>{children}</body>
     </html>
   );
 }

@@ -1,14 +1,12 @@
-import { Montserrat, Open_Sans } from 'next/font/google';
+import {  Open_Sans } from 'next/font/google';
 
 const FontSans = Open_Sans({
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
   variable: '--font-sans',
-  weight: ['400', '500'],
-});
-const FontTitle = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-title',
-  weight: '700',
+  weight: 'variable',
+  adjustFontFallback: true,
 });
 
-export { FontSans, FontTitle };
+export { FontSans };
