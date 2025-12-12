@@ -1,41 +1,43 @@
-import { keys } from '@nsmnia-template/next-config/keys';
-import merge from 'lodash.merge';
-import type { Metadata } from 'next';
+import { keys } from "@nsmnia-template/next-config/keys";
+import merge from "lodash.merge";
+import type { Metadata } from "next";
 
-type BaseMetadataGenerator = Omit<Metadata, 'title'> & {
-  description: string;
-};
+type BaseMetadataGenerator = Omit<Metadata, "title">;
 
 type LayoutMetadataGenerator = BaseMetadataGenerator & {
   title?: string;
+  description?: string;
   isLayout: true;
 };
 
 type PageMetadataGenerator = BaseMetadataGenerator & {
   title: string;
+  description: string;
   isLayout?: false;
 };
 
 type MetadataGenerator = LayoutMetadataGenerator | PageMetadataGenerator;
 
-const config = {
-  applicationName: 'NSMNIA Template',
+export const config = {
+  applicationName: "Revolved Design",
   author: {
-    name: 'NSMNIA',
-    url: 'https://tune-tracker.com',
-  } satisfies Metadata['authors'],
-  publisher: 'NSMNIA',
+    name: "Revolved Design",
+    url: "https://revolved.design",
+  } satisfies Metadata["authors"],
+  publisher: "Revolved Design",
   twitterHandle: undefined as string | undefined,
-  protocol: keys().NODE_ENV === 'production' ? 'https' : 'http',
+  protocol: keys().NODE_ENV === "production" ? "https" : "http",
   productionUrl: keys().NEXT_PUBLIC_APP_URL,
   image: {
-    url: '/website-og.png',
+    url: "/website-og.png",
     width: 1200,
     height: 630,
-  } satisfies NonNullable<NonNullable<NonNullable<Metadata['openGraph']>['images']>>,
+  } satisfies NonNullable<
+    NonNullable<NonNullable<Metadata["openGraph"]>["images"]>
+  >,
 } as const;
 
-const defaults: Omit<Metadata, 'title' | 'description'> = {
+const defaults: Omit<Metadata, "title" | "description"> = {
   applicationName: config.applicationName,
   metadataBase: config.productionUrl
     ? new URL(`${config.protocol}://${config.productionUrl}`)
@@ -51,18 +53,30 @@ const defaults: Omit<Metadata, 'title' | 'description'> = {
   },
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: "default",
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: '/favicon.svg',
-  }
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    type: "website",
+    siteName: config.applicationName,
+    locale: "en_US",
+    images: [config.image],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [config.image],
+    creator: config.twitterHandle,
+    site: config.productionUrl,
+  },
 };
 
- const metadata= ({
+const metadata = ({
   title,
   description,
   isLayout = false,
@@ -76,36 +90,31 @@ const defaults: Omit<Metadata, 'title' | 'description'> = {
       }
     : title;
 
- const baseMetadata: Metadata = {
+  const baseMetadata: Metadata = {
     ...defaults,
     title: titleConfig,
     description,
     appleWebApp: {
-      ...(typeof defaults.appleWebApp === 'object' ? defaults.appleWebApp : {}),
+      ...(typeof defaults.appleWebApp === "object" ? defaults.appleWebApp : {}),
       title,
     },
     openGraph: {
-      title,
+      ...defaults.openGraph,
+      title: titleConfig,
       description,
-      images: [config.image],
-        type: 'website',
-        siteName: applicationName,
-        locale: 'en_US',
     },
     twitter: {
-        card: 'summary_large_image',
-  creator: config.twitterHandle,
-  images: [config.image],
+      ...defaults.twitter,
+      title: titleConfig,
     },
-  }
+  };
 
-    return merge(baseMetadata, properties);
+  return merge(baseMetadata, properties);
 };
 
 export const createLayoutMetadata = (
-  config: Omit<LayoutMetadataGenerator, 'isLayout'>
-): Metadata => metadata({ ...config, isLayout: true });
+  layoutConfig: Omit<LayoutMetadataGenerator, "isLayout">
+): Metadata => metadata({ ...layoutConfig, isLayout: true });
 
-export const createMetadata = (
-  config: PageMetadataGenerator
-): Metadata => metadata({ ...config, isLayout: false });
+export const createMetadata = (pageConfig: PageMetadataGenerator): Metadata =>
+  metadata({ ...pageConfig, isLayout: false });

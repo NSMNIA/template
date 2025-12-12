@@ -15,7 +15,11 @@
     "lodash.merge": "^4.6.2",
     "schema-dts": "^1.1.5"
   },
+  "peerDependencies": {
+    "next": ">=16.0.10"
+  },
   "devDependencies": {
+    "next": "*",
     "@nsmnia-template/typescript-config": "workspace:*",
     "@nsmnia-template/next-config": "workspace:*",
     "@types/lodash.merge": "^4.6.9"

@@ -16,25 +16,30 @@
     "@types/react-dom": "^19.2.3",
     "turbo": "^2.6.3",
     "typescript": "^5.9.3",
-    "ultracite": "^6.3.10"
+    "ultracite": "^6.4.0"
   },
   "engines": {
     "node": ">=20"
   },
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
-    "next": "^16.0.8",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
-    "@tailwindcss/postcss": "^4.1.17",
-    "tailwindcss": "^4.1.17",
+    "next": "^16.0.10",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "@tailwindcss/postcss": "^4.1.18",
+    "tailwindcss": "^4.1.18",
     "tailwind-merge": "^3.4.0",
-    "lucide-react": "^0.559.0",
+    "lucide-react": "^0.561.0",
     "postcss": "^8.5.6"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
       "pnpm dlx ultracite fix"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "next": "16.0.10"
+    }
   }
 }
